@@ -13,4 +13,20 @@ class MyTriangle
       @side3.eql?(@side1)
 
     end
+
+    define_method(:isosceles?) do
+      truth_value = 0
+      if @side1.eql?(@side2)
+        truth_value = truth_value + 1
+      elsif @side2.eql?(@side3)
+        truth_value = truth_value + 1
+      elsif @side3.eql?(@side1)
+        truth_value = truth_value + 1
+      end
+
+      if truth_value = 1
+        true
+      end
+
+  end
 end
