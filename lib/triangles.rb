@@ -10,6 +10,8 @@ class MyHash
     end
 
     define_method(:fetch) do |key|
-        @stored_array_value.pop
+        array_position = @stored_array_key.index(key)
+        value_result = @stored_array_value[array_position]
+        value_result
     end
 end
