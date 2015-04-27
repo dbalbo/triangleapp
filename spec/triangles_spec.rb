@@ -2,12 +2,12 @@ require('rspec')
 require('triangles')
 require('pry')
 
-describe(MyHash) do
-  describe("#fetch") do
-    it("retrieves a stored value by its key") do
-      test_hash = MyHash.new()
-      test_hash.store("kitten", "cute")
-      expect(test_hash.fetch("kitten")).to(eq("cute"))
+describe(MyTriangle) do
+  describe("#equilateral?") do
+    it("will return true if all sides are equal") do
+      test_triangle = MyTriangle.new(15, 15, 15)
+      test_triangle.equilateral?()
+      expect(test_triangle.equilateral?()).to(eq(true))
     end
   end
 end

@@ -1,17 +1,16 @@
-class MyHash
-    define_method(:initialize) do
-        @stored_array_key = []
-        @stored_array_value = []
+class MyTriangle
+    define_method(:initialize) do |side1, side2, side3|
+
+      @side1 = side1
+      @side2 = side2
+      @side3 = side3
+
     end
 
-    define_method(:store) do |key, value|
-        @stored_array_key.push(key)
-        @stored_array_value.push(value)
-    end
+    define_method(:equilateral?) do
+      @side1.eql?(@side2)
+      @side2.eql?(@side3)
+      @side3.eql?(@side1)
 
-    define_method(:fetch) do |key|
-        array_position = @stored_array_key.index(key)
-        value_result = @stored_array_value[array_position]
-        value_result
     end
 end
