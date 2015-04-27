@@ -6,16 +6,21 @@ describe(MyTriangle) do
   describe("#equilateral?") do
     it("will return true if all sides are equal") do
       test_triangle = MyTriangle.new(15, 15, 15)
-      test_triangle.equilateral?()
-      expect(test_triangle.equilateral?()).to(eq(true))
+      expect(test_triangle.triangle_type()).to(eq("equilateral"))
       end
     end
 
   describe("#isosceles?") do
     it("will return true if two sides are equal") do
       test_triangle = MyTriangle.new(15, 15, 30)
-      test_triangle.isosceles?()
-      expect(test_triangle.isosceles?()).to(eq(true))
+      expect(test_triangle.triangle_type()).to(eq("isosceles"))
+      end
+    end
+
+describe("#scalene?") do
+    it("will return true if two sides are equal") do
+      test_triangle = MyTriangle.new(15, 45, 30)
+      expect(test_triangle.triangle_type()).to(eq("scalene"))
       end
     end
 end
